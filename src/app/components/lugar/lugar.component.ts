@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LugaresService} from '../../services/lugares.service';
 
 @Component({
   selector: 'app-lugar',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lugar.component.css']
 })
 export class LugarComponent implements OnInit {
+  lugares = [];
 
-  constructor() { }
+  constructor(
+    private lugaresService: LugaresService
+  ) {
+    this.lugares = this.lugaresService.getLugares();
+  }
 
   ngOnInit() {
   }
