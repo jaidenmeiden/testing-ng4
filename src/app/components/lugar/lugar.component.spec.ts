@@ -3,23 +3,17 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { LugarComponent } from './lugar.component';
 
 describe('LugarComponent', () => {
-  let component: LugarComponent;
-  let fixture: ComponentFixture<LugarComponent>;
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LugarComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        LugarComponent
+      ],
+    }).compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LugarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(LugarComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
   });
 });
